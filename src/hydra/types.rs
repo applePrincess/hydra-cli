@@ -19,11 +19,9 @@ pub struct Eval {
 
 #[derive(Serialize, Deserialize, PartialEq, Debug)]
 pub struct Project {
-    #[serde(deserialize_with = "bool_from_int")]
     pub enabled: bool,
     pub name: String,
     pub description: Option<String>,
-    #[serde(deserialize_with = "bool_from_int")]
     pub hidden: bool,
     pub owner: String,
     pub displayname: String,
